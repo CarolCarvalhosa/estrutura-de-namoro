@@ -83,3 +83,11 @@ D:\Documentos\Visual Studio 2019\source\EstruturasDeNamoro\obj\Debug\EstruturasD
 D:\Documentos\Visual Studio 2019\source\EstruturasDeNamoro\obj\Debug\EstruturasDeNamoro.csproj.CopyComplete
 D:\Documentos\Visual Studio 2019\source\EstruturasDeNamoro\obj\Debug\EstruturasDeNamoro.dll
 D:\Documentos\Visual Studio 2019\source\EstruturasDeNamoro\obj\Debug\EstruturasDeNamoro.pdb
+D:\Documentos\Visual Studio 2019\source\EstruturasDeNamoro\bin\roslyn\System.Buffers.dll
+D:\Documentos\Visual Studio 2019\source\EstruturasDeNamoro\bin\roslyn\System.Memory.dll
+D:\Documentos\Visual Studio 2019\source\EstruturasDeNamoro\bin\roslyn\System.Numerics.Vectors.dll
+D:\Documentos\Visual Studio 2019\source\EstruturasDeNamoro\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Documentos\Visual Studio 2019\source\EstruturasDeNamoro\bin\EntityFramework.dll
+D:\Documentos\Visual Studio 2019\source\EstruturasDeNamoro\bin\EntityFramework.SqlServer.dll
+D:\Documentos\Visual Studio 2019\source\EstruturasDeNamoro\bin\EntityFramework.xml
+D:\Documentos\Visual Studio 2019\source\EstruturasDeNamoro\bin\EntityFramework.SqlServer.xml

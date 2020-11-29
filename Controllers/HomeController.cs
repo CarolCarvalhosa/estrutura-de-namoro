@@ -10,6 +10,8 @@ namespace EstruturasDeNamoro.Controllers
     {
         public ActionResult Index()
         {
+            Entities entities = new Entities();
+            var test = entities.User.ToList();
             return View();
         }
 
