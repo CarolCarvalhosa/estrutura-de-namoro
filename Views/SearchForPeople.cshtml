@@ -1,0 +1,76 @@
+﻿@model List<UserMatch>
+
+@{
+    ViewBag.Title = "Search for People";
+}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/Content/css/search-for-people.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="header">
+                <div class="img-name-container">
+                    <div class="avatar">
+                        <img src="@ViewBag.LoggedUser.PhotoURL" alt="" />
+                    </div>
+                    <div class="title">Meu perfil</div>
+                </div>
+                <div class="bag-container">
+                    <img style="height: 15px" src="~/Content/icons/bag.svg" />
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>Matches</li>
+                    <li class="active">Mensagens</li>
+                </ul>
+            </div>
+            @foreach (var match in Model)
+            {
+                <div class="messages">
+                    <div class="avatar">
+                        <img src="@match.User2.PhotoURL" alt="@match.User2.Name photo" />
+                    </div>
+                    <div class="message">
+                        <div class="user">@match.User2.Name</div>
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="content">
+            <div class="card">
+                <div class="user">
+                    <img class="user"
+                         src="https://datingskillsmasters.com/wp-content/uploads/2019/10/texting-a-random-girl-on-instagram.jpg"
+                         alt="" />
+                    <div class="profile">
+                        <div class="name">Julia <span>20</span></div>
+                        <div class="local">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>a 20 quilômetros daqui</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reaction-buttons">
+                <div class="no">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="star">
+                    <i class="fas fa-star fa"></i>
+                </div>
+                <div class="heart">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

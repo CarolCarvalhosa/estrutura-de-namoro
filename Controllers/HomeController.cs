@@ -10,23 +10,37 @@ namespace EstruturasDeNamoro.Controllers
     {
         public ActionResult Index()
         {
-            Entities entities = new Entities();
-            var test = entities.User.ToList();
-            return View();
+            EntityModel entities = new EntityModel();
+
+            // Testando apenas com a user Ana Luisa (LINQ)
+            var LoggedUser = entities.User.FirstOrDefault(x => x.Name == "Ana Luisa");
+            ViewBag.LoggedUser = LoggedUser;
+
+            // Trazendo entidades matched (LINQ)
+            var matches = entities.UserMatch.Where(x => x.UserId == LoggedUser.Id).ToList();
+
+            // Preenchendo entidades (metodo de extensao)
+            foreach(var match in matches)
+            {
+                match.FillData();
+            }
+
+            return View("~/Views/SearchForPeople.cshtml", matches);
         }
 
-        public ActionResult About()
+        public ActionResult MyProfile()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult SearchForPeople()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your application description page.";
 
             return View();
         }
+
     }
 }
